@@ -1,7 +1,7 @@
 # Heat Risk Analysis Japan / 熱中症リスク分析
 
 **Which prefectures are both aging fast and getting extremely hot?**
-**高齢化が進み、しかも猛暑日が多いのはどの都道府県か？**
+**高齢化が進み、また猛暑日が多いのはどの都道府県か？**
 
 🔗 **Interactive dashboard / ダッシュボード:**
 [Tableau Public – Heat Risk Analysis Japan](https://public.tableau.com/views/HeatRiskAnalysisJapan/HeatRiskAnalysisJapan)
