@@ -2,16 +2,6 @@
 -- 03_load_weather.sql
 -- 気象データの取り込みと縦長への変換（SQLのみ）
 -- Load JMA weather data and unpivot wide -> long using SQL only
---
--- 出典 / Source: 気象庁 過去の気象データ・ダウンロード
---   47 県庁所在地, 月別値, 2015-01 to 2024-12
---   月平均気温 / 日最高気温35℃以上日数（猛暑日）
--- 元データの形 / Raw format:
---   47地点が横に並ぶ（1地点6列：気温・品質・均質番号・猛暑日・品質・均質番号）
---   47 stations side by side, 6 columns per station
--- 前処理 / Preprocessing:
---   「品質情報・均質番号」の見出し行を削除 → データは6行目から
---   Removed the sub-header row; data starts on line 6
 -- ============================================================
 
 USE heat_risk;
@@ -68,7 +58,7 @@ CREATE TABLE weather (
 -- ------------------------------------------------------------
 -- STEP 4: 横長 -> 縦長 / Unpivot
 --   列の並び：1 年 / 2 月 / 以降1地点6列
---   Column layout: 1 year, 2 month, then 6 columns per station
+--   Column layout: 1 year, 2 month, then 6 columns per city
 --   地点n: 気温 = 3+6n番目, 品質 = 4+6n, 猛暑日 = 6+6n, 品質 = 7+6n
 --   SUBSTRING_INDEX(SUBSTRING_INDEX(s, ',', i), ',', -1) = i番目の値 / i-th value
 -- ------------------------------------------------------------
@@ -84,7 +74,7 @@ SELECT
   SUBSTRING_INDEX(SUBSTRING_INDEX(d.line, ',', 7 + 6*k.n), ',', -1)  AS hot_quality
 FROM weather_raw d                          -- データ行 / data rows
 JOIN weather_raw h3 ON h3.line_no = 3       -- 3行目：都府県名 / prefecture (JMA)
-JOIN weather_raw h4 ON h4.line_no = 4       -- 4行目：地点名 / station city
+JOIN weather_raw h4 ON h4.line_no = 4       -- 4行目：地点名 / city
 CROSS JOIN k                                -- 47地点ぶん展開 / expand 47 stations
 WHERE d.line_no >= 6;
 
