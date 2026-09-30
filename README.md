@@ -6,7 +6,8 @@
 🔗 **Interactive dashboard / ダッシュボード:**
 [Tableau Public – Heat Risk Analysis Japan](https://public.tableau.com/views/HeatRiskAnalysisJapan/HeatRiskAnalysisJapan)\
 🔗 **Presentation PowerPoint / プレゼンテーションパワーポイント:**
-[heat_risk_presentation] (heat_risk_presentation copy.pdf)
+[Heat Risk Presentation PPT](heat_risk_presentation.pdf)
+
 
 [![Dashboard – click to open in Tableau Public / クリックでダッシュボードを開く](image/dashboard.png)](https://public.tableau.com/views/HeatRiskAnalysisJapan/HeatRiskAnalysisJapan)
 
