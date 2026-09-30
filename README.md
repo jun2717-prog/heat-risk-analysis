@@ -4,7 +4,9 @@
 **高齢化が進み、また猛暑日が多いのはどの都道府県か？**
 
 🔗 **Interactive dashboard / ダッシュボード:**
-[Tableau Public – Heat Risk Analysis Japan](https://public.tableau.com/views/HeatRiskAnalysisJapan/HeatRiskAnalysisJapan)
+[Tableau Public – Heat Risk Analysis Japan](https://public.tableau.com/views/HeatRiskAnalysisJapan/HeatRiskAnalysisJapan)\
+🔗 **Presentation PowerPoint / プレゼンテーションパワーポイント:**
+[heat_risk_presentation] (heat_risk_presentation copy.pdf)
 
 [![Dashboard – click to open in Tableau Public / クリックでダッシュボードを開く](image/dashboard.png)](https://public.tableau.com/views/HeatRiskAnalysisJapan/HeatRiskAnalysisJapan)
 
