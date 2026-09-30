@@ -93,6 +93,34 @@ The two conditions are combined into four groups. Read the row (aging rate) and 
 These four areas are the same as the four quadrants created by the national-average lines on the dashboard scatter plot.
 この4分類は、ダッシュボードの散布図で全国平均の縦線と横線に区切られた4つのエリアと同じ意味です。
 
+## Why Combine Both Measures? / なぜ2つの指標を組み合わせるのか
+
+**Short answer: because aging and heat are almost unrelated.**
+**結論：高齢化と暑さには、ほとんど関係がないからです。**
+
+A linear trend line across all 47 prefectures shows almost no relationship between the two:
+47都道府県すべてにトレンドライン（回帰直線）を引くと、2つの関係はほぼ見られませんでした。
+
+| Measure / 指標 | Value / 値 | Meaning / 意味 |
+|---|---|---|
+| R² | 0.04 | Aging explains only 4% of the difference in hot days<br>高齢化率で説明できる猛暑日の差は、わずか4% |
+| p-value / p値 | 0.19 | Above 0.05, so the slight downward slope could be chance<br>0.05を超えるため、わずかな右下がりは偶然の範囲 |
+
+**Why is "no relationship" a good thing here? / なぜ「関係がない」ことが良いのか**
+
+- **If the two were strongly related:** looking at one would tell you the other, so one measure would be enough.
+  **もし2つが強く関係していたら：** 片方を見ればもう片方もわかるので、指標は1つで十分です。
+- **Because they are unrelated (actual result):** aging does not tell you where it is hot, and heat does not tell you where older people live.
+  **実際は関係がないので：** 高齢化率から暑い地域はわからず、猛暑日から高齢者が多い地域もわかりません。
+- **So high-risk areas only appear when both are combined.**
+  **だからこそ、両方を重ねて初めて高リスクの地域が見えてきます。**
+
+This follows a common way of thinking about disaster risk: **Risk = Hazard × Vulnerability.** Here, extremely hot days are the hazard (the dangerous condition), and older residents are the vulnerability (the people most likely to be harmed). Like fire risk, where dry weather and wooden houses are separate factors but most dangerous where they overlap, heat risk is highest where heat and aging overlap.
+これは、災害リスクの一般的な考え方 **「リスク ＝ 危険な現象（ハザード）× 影響の受けやすさ（脆弱性）」** に沿っています。猛暑日がハザード、高齢者が脆弱性です。「空気の乾燥」と「木造住宅の多さ」は別々の要素でも、重なる場所で火事のリスクが最も高くなるのと同じように、熱中症のリスクも暑さと高齢化が重なる場所で最も高くなります。
+
+> Note: This checks the relationship between the two risk factors, not whether they cause heatstroke. Testing that would require heatstroke ambulance data (see Limitations).
+> 注：ここで確認したのは2つのリスク要素同士の関係であり、熱中症の原因かどうかではありません。それを検証するには、熱中症の救急搬送データが必要です（「分析の限界」参照）。
+> 
 ## Key Findings / 主な発見
 
 1. **9 prefectures are High Risk:** Yamanashi, Kumamoto, Saga, Kagawa, Nara, Yamaguchi, Tottori, Fukushima and Toyama.
